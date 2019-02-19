@@ -17,6 +17,11 @@ import AVFoundation
     
     private var audioPlayer: AVAudioPlayer?
     weak var delegate: PlayerDelagate?
+    private var timer: Timer?
+    
+    var elaspedTime: TimeInterval {
+        return audioPlayer?.currentTime ?? 0
+    }
     
     var isPlaying: Bool {
         return audioPlayer?.isPlaying ?? false
@@ -38,11 +43,18 @@ import AVFoundation
             audioPlayer?.delegate = self
         }
         audioPlayer?.play()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true, block: { [weak self] _ in
+            self?.notifyDelegate()
+        })
+        
         notifyDelegate()
     }
     
     func pause(){
         audioPlayer?.pause()
+        timer?.invalidate()
+        timer = nil
         notifyDelegate()
     }
     
