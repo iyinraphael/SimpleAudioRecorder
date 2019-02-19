@@ -13,6 +13,8 @@
 		EB12C9E5221C70B4002A1DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB12C9E4221C70B4002A1DDC /* Assets.xcassets */; };
 		EB12C9E8221C70B4002A1DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB12C9E6221C70B4002A1DDC /* LaunchScreen.storyboard */; };
 		EB12C9F0221C72AA002A1DDC /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12C9EF221C72AA002A1DDC /* MyPlayer.swift */; };
+		EB12C9F2221C75C1002A1DDC /* Basso.aiff in Resources */ = {isa = PBXBuildFile; fileRef = EB12C9F1221C75C1002A1DDC /* Basso.aiff */; };
+		EB12C9F4221C7673002A1DDC /* Bang.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EB12C9F3221C7672002A1DDC /* Bang.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EB12C9E7221C70B4002A1DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB12C9E9221C70B4002A1DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB12C9EF221C72AA002A1DDC /* MyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlayer.swift; sourceTree = "<group>"; };
+		EB12C9F1221C75C1002A1DDC /* Basso.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Basso.aiff; sourceTree = "<group>"; };
+		EB12C9F3221C7672002A1DDC /* Bang.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bang.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				EB12C9E1221C70B1002A1DDC /* Main.storyboard */,
 				EB12C9E4221C70B4002A1DDC /* Assets.xcassets */,
 				EB12C9E6221C70B4002A1DDC /* LaunchScreen.storyboard */,
+				EB12C9F1221C75C1002A1DDC /* Basso.aiff */,
+				EB12C9F3221C7672002A1DDC /* Bang.mp3 */,
 				EB12C9E9221C70B4002A1DDC /* Info.plist */,
 				EB12C9EF221C72AA002A1DDC /* MyPlayer.swift */,
 			);
@@ -127,6 +133,8 @@
 			files = (
 				EB12C9E8221C70B4002A1DDC /* LaunchScreen.storyboard in Resources */,
 				EB12C9E5221C70B4002A1DDC /* Assets.xcassets in Resources */,
+				EB12C9F4221C7673002A1DDC /* Bang.mp3 in Resources */,
+				EB12C9F2221C75C1002A1DDC /* Basso.aiff in Resources */,
 				EB12C9E3221C70B1002A1DDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

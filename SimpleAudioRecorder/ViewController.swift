@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private let player = Player()
+    
     @IBOutlet weak var playButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedPLayButton(_ sender: Any) {
+        player.playPause()
     }
     
 }

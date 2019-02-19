@@ -29,6 +29,8 @@ import AVFoundation
     func play(){
         if audioPlayer == nil {
             //make an audio player
+            let sougURL = Bundle.main.url(forResource: "Bang", withExtension:"mp3" )!
+            audioPlayer = try! AVAudioPlayer(contentsOf: sougURL)
         }
         audioPlayer?.play()
     }
