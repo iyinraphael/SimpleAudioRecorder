@@ -9,10 +9,14 @@
 import Foundation
 import AVFoundation
  
+ protocol PlayerDelagate: AnyObject {
+    func playerDidChangeState(_ player: Player)
+ }
 
- class Player: NSObject {
+ class Player: NSObject, AVAudioPlayerDelegate {
     
     private var audioPlayer: AVAudioPlayer?
+    weak var delegate: PlayerDelagate?
     
     var isPlaying: Bool {
         return audioPlayer?.isPlaying ?? false
@@ -31,11 +35,22 @@ import AVFoundation
             //make an audio player
             let sougURL = Bundle.main.url(forResource: "Bang", withExtension:"mp3" )!
             audioPlayer = try! AVAudioPlayer(contentsOf: sougURL)
+            audioPlayer?.delegate = self
         }
         audioPlayer?.play()
+        notifyDelegate()
     }
     
     func pause(){
         audioPlayer?.pause()
+        notifyDelegate()
+    }
+    
+    private func notifyDelegate() {
+        delegate?.playerDidChangeState(self)
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        notifyDelegate()
     }
  }
