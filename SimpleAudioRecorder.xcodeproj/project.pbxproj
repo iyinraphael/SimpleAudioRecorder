@@ -15,6 +15,7 @@
 		EB12C9F0221C72AA002A1DDC /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12C9EF221C72AA002A1DDC /* MyPlayer.swift */; };
 		EB12C9F2221C75C1002A1DDC /* Basso.aiff in Resources */ = {isa = PBXBuildFile; fileRef = EB12C9F1221C75C1002A1DDC /* Basso.aiff */; };
 		EB12C9F4221C7673002A1DDC /* Bang.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EB12C9F3221C7672002A1DDC /* Bang.mp3 */; };
+		EB12C9F6221C82F1002A1DDC /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12C9F5221C82F1002A1DDC /* Recorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EB12C9EF221C72AA002A1DDC /* MyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlayer.swift; sourceTree = "<group>"; };
 		EB12C9F1221C75C1002A1DDC /* Basso.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Basso.aiff; sourceTree = "<group>"; };
 		EB12C9F3221C7672002A1DDC /* Bang.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bang.mp3; sourceTree = "<group>"; };
+		EB12C9F5221C82F1002A1DDC /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				EB12C9F3221C7672002A1DDC /* Bang.mp3 */,
 				EB12C9E9221C70B4002A1DDC /* Info.plist */,
 				EB12C9EF221C72AA002A1DDC /* MyPlayer.swift */,
+				EB12C9F5221C82F1002A1DDC /* Recorder.swift */,
 			);
 			path = SimpleAudioRecorder;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				EB12C9E0221C70B1002A1DDC /* ViewController.swift in Sources */,
 				EB12C9F0221C72AA002A1DDC /* MyPlayer.swift in Sources */,
 				EB12C9DE221C70B1002A1DDC /* AppDelegate.swift in Sources */,
+				EB12C9F6221C82F1002A1DDC /* Recorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

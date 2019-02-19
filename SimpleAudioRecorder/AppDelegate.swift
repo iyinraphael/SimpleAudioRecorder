@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,13 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-    
-//        
-//        let docsDir = try! FileManager.default.urls(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-//        
-//        let path = docsDir.path
-//        print("The doc directory \(path)")
+        let session = AVAudioSession.sharedInstance()
+        session.requestRecordPermission { (granted) in
+            guard granted == true else {
+                NSLog("We need microphone")
+                return
+            }
+            
+            do {
+                try session.setCategory(.playAndRecord, mode: .default, options: [])
+                try session.overrideOutputAudioPort(.speaker)
+                try session.setActive(true, options: [])
+            }catch{
+                NSLog("Error settting audio \(error)")
+            }
+        }
         return true
     }
 

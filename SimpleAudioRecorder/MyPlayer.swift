@@ -19,9 +19,19 @@ import AVFoundation
     weak var delegate: PlayerDelagate?
     private var timer: Timer?
     
+    
     var elaspedTime: TimeInterval {
         return audioPlayer?.currentTime ?? 0
     }
+    
+    var totalTime: TimeInterval{
+        return audioPlayer?.currentTime ?? 0
+    }
+    
+    var timeRemaining: TimeInterval {
+        return totalTime - elaspedTime
+    }
+    
     
     var isPlaying: Bool {
         return audioPlayer?.isPlaying ?? false

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, PlayerDelagate {
     
     private let player = Player()
+    private let recorder = Recorder()
     
     private lazy var timeFormatter: DateComponentsFormatter = {
         let f = DateComponentsFormatter()
@@ -37,11 +38,19 @@ class ViewController: UIViewController, PlayerDelagate {
     func updateViews(){
         let isPlaying = player.isPlaying
         playButton.setTitle(isPlaying ? "Pause" : "Play", for: .normal)
-        let elaspedTime = player.elaspedTime
         timeLabel.text = timeFormatter.string(from: player.elaspedTime)
+        timeRemaining.text = timeFormatter.string(from: player.timeRemaining)
+    
     }
+    @IBOutlet weak var recordButton: UIButton!
     
     @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var timeRemaining: UILabel!
+    
+    @IBAction func tappedRecordButton(_ sender: Any) {
+    }
     
 }
 
